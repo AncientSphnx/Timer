@@ -11,9 +11,9 @@ def timer():
         i=n
         while i>=0:
             if(i==0):
-                playsound(r'C:\Users\91829\OneDrive\Desktop\coding\Timer project\Sounds\winfantasia-6912.mp3')
+                playsound(r'Path of the sound You want to play')
             print(i)
-            playsound(r'C:\Users\91829\OneDrive\Desktop\coding\Timer project\Sounds\click-button-140881.mp3')
+            playsound(r'Path of the sound You want to play')
             time.sleep(0.8)
             i-=1
     except:
@@ -51,7 +51,7 @@ def alarm():
                 if(alarm_minute==current_minute):
                     if(alarm_seconds==current_seconds):
                         print("Wake Up!")
-                        playsound(r'C:\Users\91829\OneDrive\Desktop\coding\Timer project\Sounds\smartphone_vibrating_alarm_silent-7040.mp3')
+                        playsound(r'Path of the sound You want to play')
                         break
 op=int(input("enter the one of the options\n1)Timer\n2)Stop watch\n"))
 match op:
