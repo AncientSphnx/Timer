@@ -1,27 +1,35 @@
 # ⏱️ Timer, Stopwatch & Alarm in Python  
 
-A simple **Python utility** that includes:  
-- ⏲️ **Countdown Timer**  
-- ⏱️ **Stopwatch**  
-- ⏰ **Alarm Clock**  
+A **modern GUI application** built with tkinter that includes:  
+- ⏲️ **Countdown Timer** with visual display  
+- ⏱️ **Stopwatch** with lap times functionality  
+- ⏰ **Alarm Clock** with time setting and display  
 
-This project is built using Python’s built-in libraries and a few external ones for sound and keyboard input.
+This project features a beautiful dark theme interface with sound notifications and smooth animations.
 
 ---
 
 ## 🚀 Features
 
-- **Timer** – enter seconds and get countdown with sound alerts  
-- **Stopwatch** – start/stop with key press (`g` to start, `s` to stop)  
-- **Alarm** – set an alarm for a specific time (HH:MM:SS AM/PM)  
-- **Sound Notifications** using `playsound`  
+- **Modern GUI** with dark theme and tabbed interface
+- **Timer** – set countdown with hours, minutes, seconds and visual progress
+- **Stopwatch** – start/stop/lap functionality with millisecond precision
+- **Alarm** – set daily alarms with visual time display
+- **Sound Notifications** using built-in sound files
+- **Responsive Design** – clean, modern interface with intuitive controls
+- **Threading Support** – non-blocking operations for smooth performance
 
 ---
 
 ## 📂 Project Structure
 ```
 Timer-Project/
-├── Timer.py # Main script with timer, stopwatch, alarm functions
+├── Timer.py # Modern GUI application
+├── Sounds/ # Sound effects directory
+│   ├── click-button-140881.mp3 # Timer tick sound
+│   ├── smartphone_vibrating_alarm_silent-7040.mp3 # Alarm sound
+│   └── winfantasia-6912.mp3 # Timer completion sound
+├── requirements.txt # Python dependencies
 └── README.md # Documentation
 ```
 
@@ -33,44 +41,66 @@ Make sure you have **Python 3.8+** installed.
 
 Install required libraries:  
 ```bash
-pip install playsound keyboard
+pip install -r requirements.txt
 ```
-⚙️ Usage
 
-Run the script:
-```
+## ⚙️ Usage
+
+Run the modern GUI application:
+```bash
 python Timer.py
+```
 
-```
-Choose an option:
-```
-enter one of the options
-1) Timer
-2) Stop watch
-3) Alarm
-```
-1. For Timer:
-- Enter seconds (e.g., 10)
-- Wait for countdown → sound plays when time is up
-2. For Stopwatch:
-- Type g and press Enter to start
-- Press s to stop
-3. For Alarm:
-- Enter time in HH:MM:SS AM/PM format (e.g., 07:30:00 AM)
-- Script checks continuously until time matches → sound plays
+Features:
+- **Timer Tab**: Set countdown with hours, minutes, seconds
+- **Stopwatch Tab**: Start/stop with lap times recording
+- **Alarm Tab**: Set alarms with visual time display
 
-🔊 Adding Your Own Sound
+### How to Use:
 
-Replace this placeholder in the code with the path to your .mp3 or .wav file:
-```
-playsound(r'Path of the sound You want to play')
-```
+1. **Timer**:
+   - Set hours, minutes, and seconds using the spinboxes
+   - Click START to begin countdown
+   - Use PAUSE to temporarily stop
+   - Click RESET to clear and set new time
+
+2. **Stopwatch**:
+   - Click START to begin timing
+   - Click LAP to record current time
+   - Use PAUSE to stop temporarily
+   - Click RESET to clear all lap times
+
+3. **Alarm**:
+   - Set desired alarm time using spinboxes
+   - Click SET ALARM to activate
+   - Click CANCEL to deactivate
+   - Current time is displayed above
+
+## 🎨 GUI Features
+
+- **Dark Theme**: Modern dark interface with accent colors
+- **Tabbed Interface**: Easy navigation between Timer, Stopwatch, and Alarm
+- **Visual Feedback**: Large digital displays for time
+- **Sound Integration**: Built-in tick, alarm, and completion sounds
+- **Responsive Controls**: Intuitive start/pause/reset buttons
+- **Lap Times**: Stopwatch includes lap recording functionality
+- **Real-time Clock**: Alarm tab shows current time
+
+## 🔊 Sound Files
+
+The application includes three sound effects:
+- `click-button-140881.mp3` - Timer tick sound
+- `smartphone_vibrating_alarm_silent-7040.mp3` - Alarm notification
+- `winfantasia-6912.mp3` - Timer completion sound
+
+All sounds are automatically loaded from the `Sounds/` directory.
 
 ⚠️ Notes
 
 * On Linux/macOS, playsound may behave differently. Consider using pygame or winsound (Windows only) as alternatives.
-* The stopwatch relies on the keyboard module → it requires admin/root permissions on some systems.
-* Make sure your terminal/IDE allows key detection.
+* The GUI application uses tkinter which comes pre-installed with Python.
+* Sound files are automatically loaded from the Sounds directory.
+* Make sure the Sounds directory exists with the provided MP3 files for full functionality.
 
 📜 License
 
